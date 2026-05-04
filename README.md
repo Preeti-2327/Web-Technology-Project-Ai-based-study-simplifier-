@@ -1,0 +1,1 @@
+# Web-Technology-Project-Ai-based-study-simplifier-
