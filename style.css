@@ -1,0 +1,280 @@
+/* ================= GENERAL ================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7fb;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+    background-color: #0a2a4d;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.main-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Back Button */
+.back-btn {
+    margin-left: 20px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #0a2a4d;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.back-btn:hover {
+    background-color: #dbe6f5;
+}
+
+/* ================= HERO ================= */
+.hero {
+    background-color: #002147;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ================= NAV GRID ================= */
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.nav-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #002147;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nav-card:hover {
+    background: #002147;
+    color: white;
+}
+
+/* ================= LOGIN PAGE ================= */
+.main-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+}
+
+.login-container {
+    width: 320px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccd6e0;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c5aa0;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #1f3c88;
+}
+
+/* ================= REGISTER PAGE ================= */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.register-container {
+    width: 400px;
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.register-container h2 {
+    text-align: center;
+    color: #1f3c88;
+    margin-bottom: 20px;
+}
+
+.register-container input,
+.register-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccd6e0;
+    font-size: 14px;
+}
+
+/* 🔥 Smaller Centered Button */
+.register-container button {
+    width: 150px;
+    padding: 8px;
+    margin: 25px auto 0 auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c5aa0;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background-color: #1f3c88;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* ================= FOOTER ================= */
+.main-footer {
+    background: #0a2a4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* ================= DARK MODE ================= */
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+.dark .main-header {
+    background-color: #1e1e1e;
+}
+
+.dark .login-container,
+.dark .register-container,
+.dark .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark input,
+.dark select {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark .nav-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark .nav-card:hover {
+    background-color: #2c5aa0;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .main-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .login-container,
+    .register-container {
+        width: 90%;
+    }
+
+    .nav-grid {
+        width: 95%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header nav {
+        margin-top: 10px;
+    }
+}
+/* Smooth transition */
+* {
+    transition: 0.3s ease;
+}
+
+/* Better button hover */
+button:hover {
+    transform: scale(1.03);
+}
+.hidden {
+    display: none;
+}
+#loader {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    color: #2c5aa0;
+}
