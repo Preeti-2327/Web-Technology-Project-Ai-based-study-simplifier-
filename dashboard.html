@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - AI Study Simplifier</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ✅ ADD CHART.JS (VERY IMPORTANT) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <div class="logo">AI Study Simplifier</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+        <button onclick="history.back()" class="back-btn">⬅ Back</button>
+        <button onclick="toggleTheme()">🌙</button>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+    <h1>Student Dashboard</h1>
+    <p>Generate Notes, MCQs, Flashcards & Videos instantly</p>
+</div>
+
+<!-- ================= MAIN ================= -->
+<div class="dashboard">
+
+    <!-- Upload -->
+    <div class="card">
+        <h3>Upload Study Material</h3>
+        <input type="file" id="fileInput" accept=".txt,.pdf">
+    </div>
+
+    <!-- Input -->
+    <div class="card">
+    <h3>Enter Topic / Notes</h3>
+
+    <!-- 🌐 LANGUAGE SELECT -->
+    <label>Select Language:</label>
+    <select id="languageSelect">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+    </select>
+
+    <textarea id="userInput" placeholder="Paste your study content here..."></textarea>
+
+    <button onclick="generateContent()">Generate AI Output</button>
+</div>
+
+    <!-- Loader -->
+    <div id="loader" class="hidden">⏳ Generating AI Content...</div>
+
+    <!-- Output -->
+    <div class="card">
+        <h3>Simplified Content</h3>
+        <p id="simplified"></p>
+    </div>
+
+    <div class="card">
+        <h3>Notes</h3>
+        <ul id="notesContent"></ul>
+    </div>
+
+    <div class="card">
+        <h3>MCQs</h3>
+        <div id="mcqs"></div>
+    </div>
+
+    <div class="card">
+        <h3>Flashcards</h3>
+        <div id="flashcards"></div>
+    </div>
+
+    <!-- Videos -->
+    <div class="card">
+        <h3>📺 Related Videos</h3>
+        <div id="videos"></div>
+    </div>
+
+    <!-- History -->
+    <div class="card">
+        <h3>History</h3>
+        <div id="history"></div>
+    </div>
+
+    <!-- ✅ ANALYTICS -->
+    <div class="card">
+        <h3>Usage Analytics</h3>
+        <canvas id="myChart" height="120"></canvas>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    AI Study Simplifier © 2026
+</div>
+
+<!-- ✅ ONLY THIS SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
