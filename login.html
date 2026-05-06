@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Study Simplifier - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">AI Study Simplifier</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Logout</a>
+        <button onclick="history.back()" class="back-btn">⬅ Back</button>
+        <button onclick="toggleTheme()">🌙</button>
+    </nav>
+</header>
+
+<div class="main-wrapper">
+
+    <!-- Left Content Section -->
+    <div class="info-section">
+        <h1>AI Study Simplifier</h1>
+        <p class="tagline">Transforming Study Material into Smart Learning</p>
+
+        <div class="features">
+            <h3>Why Use This Platform?</h3>
+            <ul>
+                <li>✔ Convert complex notes into simplified explanations</li>
+                <li>✔ Generate smart revision notes instantly</li>
+                <li>✔ Auto-generate MCQs for exam preparation</li>
+                <li>✔ Create flashcards for quick revision</li>
+                <li>✔ Designed for university students</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Login Section -->
+    <div class="login-container">
+        <h2>Student Login</h2>
+
+        <!-- ✅ IMPORTANT: ID added -->
+        <form id="loginForm">
+
+            <input type="email" placeholder="University Email" required>
+
+            <!-- Password + Toggle -->
+            <div style="position: relative;">
+                <input type="password" id="password" placeholder="Password" required>
+                <span onclick="togglePassword('password')" 
+                      style="position:absolute; right:10px; top:12px; cursor:pointer;">
+                      👁
+                </span>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p style="text-align:center; margin-top:15px;">
+            New student? <a href="register.html">Create Account</a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 AI Study Simplifier | B.Tech Academic Project | All Rights Reserved
+</footer>
+
+<!-- ✅ LINK JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
